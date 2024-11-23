@@ -24,6 +24,10 @@
       <label for="email">Email address</label>
       <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
     </div>
+    <div class="form-group">
+      <label for="email">Mobile</label>
+      <input type="text" class="form-control" id="text" name="email" placeholder="Enter your mobile">
+    </div>
 
     <div class="form-group">
       <label for="message">Message</label>
@@ -34,7 +38,7 @@
   </form>
   <!-- Form End -->
 
-  <p class="mt-4"><a href="hello-servlet">Go to Hello Servlet</a></p>
+  <p class="mt-4"><a href="about.jsp" class="btn btn-info">Go to About Page</a></p>
 </div>
 
 <!-- Link to local Bootstrap JS and dependencies -->
