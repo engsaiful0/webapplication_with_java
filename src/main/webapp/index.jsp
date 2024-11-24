@@ -39,6 +39,7 @@
   <!-- Form End -->
 
   <p class="mt-4"><a href="about.jsp" class="btn btn-info">Go to About Page</a></p>
+  <p class="mt-4"><a href="view_contact.jsp" class="btn btn-info">View Contact</a></p>
 </div>
 
 <!-- Link to local Bootstrap JS and dependencies -->
