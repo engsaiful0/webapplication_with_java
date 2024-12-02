@@ -11,10 +11,10 @@
 <body>
 
 <div class="container">
-  <h1 class="my-4">JSP - Basic Form</h1>
+  <%@ include file="/WEB-INF/includes/navbar.jsp" %>
 
   <!-- Form Start -->
-  <form action="submit-form" method="post">
+  <form action="submit-form" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -33,13 +33,14 @@
       <label for="message">Message</label>
       <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter your message"></textarea>
     </div>
+    <div class="form-group">
+      <label for="image">Upload Image</label>
+      <input type="file" class="form-control-file" id="image" name="image">
+    </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   <!-- Form End -->
-
-  <p class="mt-4"><a href="about.jsp" class="btn btn-info">Go to About Page</a></p>
-  <p class="mt-4"><a href="view-contact" class="btn btn-info">View Contact</a></p>
 </div>
 
 <!-- Link to local Bootstrap JS and dependencies -->

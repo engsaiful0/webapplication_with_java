@@ -29,6 +29,8 @@ public class ViewContactServlet extends HttpServlet {
                     contact.setName(resultSet.getString("name"));
                     contact.setEmail(resultSet.getString("email"));
                     contact.setMessage(resultSet.getString("message"));
+                    contact.setImage(resultSet.getString("image_path"));
+
                     contactList.add(contact);
                 }
             }

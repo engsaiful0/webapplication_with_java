@@ -34,15 +34,19 @@
             color: white;
         }
     </style>
+    <link href="<%= request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Contact Form Submissions</h1>
+
+<div class="container">
+    <%@ include file="/WEB-INF/includes/navbar.jsp" %>
 <table>
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
         <th>Message</th>
+        <th>Image</th>
         <th>Actions</th>
     </tr>
     <%
@@ -55,6 +59,8 @@
         <td><%= contact.getName() %></td>
         <td><%= contact.getEmail() %></td>
         <td><%= contact.getMessage() %></td>
+        <td><img src="<%= contact.getImage() %>" alt="Contact Image" width="100" height="100" /></td>
+
         <td>
             <form action="edit-contact" method="get" style="display:inline;">
                 <input type="hidden" name="id" value="<%= contact.getId() %>">
@@ -77,5 +83,6 @@
         }
     %>
 </table>
+</div>
 </body>
 </html>

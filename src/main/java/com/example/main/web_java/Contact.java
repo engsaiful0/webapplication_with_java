@@ -4,6 +4,7 @@ public class Contact {
     private String name;
     private String email;
     private String message;
+    private String image;
     private Integer id;
 
     // Getters and Setters
@@ -36,5 +37,13 @@ public class Contact {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

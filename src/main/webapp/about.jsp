@@ -11,6 +11,7 @@
 <body>
 
 <div class="container">
+    <%@ include file="/WEB-INF/includes/navbar.jsp" %>
     <h1 class="my-4">About Page</h1>
     <p>This is a simple JSP application demonstrating navigation between pages using Bootstrap and JSP.</p>
 
