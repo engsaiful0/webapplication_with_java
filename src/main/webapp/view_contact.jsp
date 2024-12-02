@@ -39,6 +39,7 @@
 <h1>Contact Form Submissions</h1>
 <table>
     <tr>
+        <th>ID</th>
         <th>Name</th>
         <th>Email</th>
         <th>Message</th>
@@ -50,6 +51,7 @@
             for (Contact contact : contacts) {
     %>
     <tr>
+        <td><%= contact.getId() %></td>
         <td><%= contact.getName() %></td>
         <td><%= contact.getEmail() %></td>
         <td><%= contact.getMessage() %></td>

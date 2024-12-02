@@ -25,6 +25,7 @@ public class ViewContactServlet extends HttpServlet {
 
                 while (resultSet.next()) {
                     Contact contact = new Contact();
+                    contact.setId(resultSet.getInt("id"));
                     contact.setName(resultSet.getString("name"));
                     contact.setEmail(resultSet.getString("email"));
                     contact.setMessage(resultSet.getString("message"));

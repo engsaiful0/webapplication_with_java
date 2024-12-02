@@ -1,22 +1,42 @@
 <%@ page import="com.example.main.web_java.Contact" %>
-<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Edit Contact</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="<%= request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Edit Contact</h1>
-<form action="update-contact" method="post">
-    <input type="hidden" name="id" value="<%= request.getAttribute("contact").getId() %>">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="<%= request.getAttribute("contact").getName() %>"><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" value="<%= request.getAttribute("contact").getEmail() %>"><br>
-    <label for="message">Message:</label>
-    <textarea id="message" name="message"><%= request.getAttribute("contact").getMessage() %></textarea><br>
-    <button type="submit">Update</button>
-</form>
+<%
+    Contact contact = (Contact) request.getAttribute("contact");  // Casting the attribute to Contact
+%>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Edit Contact</h1>
+    <form action="update-contact" method="post">
+        <input type="hidden" name="id" value="<%= contact.getId() %>">
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= contact.getName() %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" value="<%= contact.getEmail() %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="message" class="form-label">Message:</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required><%= contact.getMessage() %></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+<!-- Optional: Include Bootstrap JS (if needed) -->
+<script src="<%= request.getContextPath() %>/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
