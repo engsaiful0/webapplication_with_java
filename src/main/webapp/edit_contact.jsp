@@ -13,6 +13,7 @@
 %>
 
 <div class="container mt-5">
+    <%@ include file="/WEB-INF/includes/navbar.jsp" %>
     <h1 class="mb-4">Edit Contact</h1>
     <form action="update-contact" method="post">
         <input type="hidden" name="id" value="<%= contact.getId() %>">
