@@ -14,8 +14,31 @@
           <a class="nav-link" href="<%= request.getContextPath() %>/about.jsp">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="view-contact">Contact</a>
+          <a class="nav-link" href="<%= request.getContextPath() %>/view-contact">Contact</a>
         </li>
+
+        <!-- Check if the user is logged in -->
+        <%
+          String username = (String) session.getAttribute("username");
+          if (username == null) {
+        %>
+        <!-- Show Login and Sign Up buttons if the user is not logged in -->
+        <li class="nav-item">
+          <a class="nav-link" href="<%= request.getContextPath() %>/login.jsp">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= request.getContextPath() %>/signup.jsp">Sign Up</a>
+        </li>
+        <%
+        } else {
+        %>
+        <!-- Show Sign Out button if the user is logged in -->
+        <li class="nav-item">
+          <a class="nav-link" href="<%= request.getContextPath() %>/logout.jsp">Sign Out</a>
+        </li>
+        <%
+          }
+        %>
       </ul>
     </div>
   </div>
